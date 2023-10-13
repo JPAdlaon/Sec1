@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1730260e52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="background">
+    <div class="container">
+      <div class="album">
+        <img src="https://i.postimg.cc/s2bX57zY/tailor-Swift.jpg" alt="TaylorSwift" class="artist-image">
+        <img src="https://i.postimg.cc/JhpQDXbC/vinyl.png" alt="vinyl" class="vinyl">
+      </div>
+      <div class="title-artist">
+        <h2 class="song-title">All Too Well (Taylor’s Version)</h2>
+        <p class="artist">Taylor Swift</p>
+      </div>
+      <audio controls class="music">
+        <source src="allTooWell.mp3" type="audio/mp3">
+      </audio>
+      <div class="seek-items">
+        <p class="start-time">00:00</p>
+        <p class="end-time">00:00</p>
+      </div>
+      <input type="range" name="" id="" value="0" class="length">
+      <div class="controller">
+        <i class="fa-solid fa-backward-step" style="color: #93375b;"></i>
+        <i class="fa-solid fa-play play" style="color: #d9d9d9;"></i>
+        <i class="fa-solid fa-forward-step" style="color: #93375b;"></i>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.background {
+position: absolute;
+background: url(https://i.postimg.cc/PJPT77KB/background.jpg);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+top: 0px;
+left: 0px;
+background-size: cover;
+background-position: center;
+position: fixed;
+z-index: -1;
+}
+
+.container {
+position: absolute;
+width: 466px;
+border: 2px solid rgba(255, 255, 255, 0.3);
+background: rgba(245, 245, 245, 0.75);
+box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+border-radius: 32px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+}
+
+/* Album */
+.album {
+position: absolute;
+width: 349px;
+height: 258.02px;
+left: calc(50% - 349px / 2 - 0.5px);
+top: 41px;
+}
+
+.vinyl {
+position: absolute;
+width: 242.36px;
+height: 242.36px;
+left: 70%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+
+.artist-image {
+position: absolute;
+width: 258.02px;
+height: 258.02px;
+left: 0;
+top: 0;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 5px;
+z-index: 1;
+}
+
+/* Title and Artist */
+.title-artist {
+margin-top: 80%;
+text-align: center;
+}
+
+.song-title {
+font-family: "Noto Sans";
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+color: #28111e;
+margin: 0;
+}
+
+.artist {
+font-family: "Noto Sans";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+color: #28111e;
+margin: 0;
+}
+
+.container audio {
+display: none;
+}
+
+/* Seek Items */
+.seek-items {
+margin-top: 60px;
+text-align: center;
+}
+
+/* Time Display */
+.start-time,
+.end-time {
+position: absolute;
+font-family: "Noto Sans";
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+color: #000000;
+margin: 0;
+}
+
+.start-time {
+left: 11%;
+top: 65%;
+}
+
+.end-time {
+right: 11%;
+top: 65%;
+}
+
+/* Input Range */
+.container .length {
+width: 85%;
+height: 5px;
+margin: 50px auto;
+-webkit-appearance: none;
+border-radius: 50px;
+background: rgba(255, 255, 255, 0.5);
+--progress-width: 0%;
+}
+
+.container .length::-webkit-progress-value {
+background-color: #56255c;
+background-color: var(--progress-color, #56255c);
+width: var(--progress-width, 0%);
+}
+
+.length::-webkit-slider-thumb {
+-webkit-appearance: none;
+border: 5px solid #56255c;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+height: 22px;
+width: 22px;
+border-radius: 50%;
+background: #ffffff;
+border: 5px solid #56255c;
+}
+
+/* Controller or Buttons */
+.controller {
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-bottom: 10%;
+}
+
+.controller i {
+height: 60px;
+width: 60px;
+font-size: 60px;
+background: transparent;
+color: rgba(147, 55, 91, 0.8);
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+margin: auto;
+}
+
+.controller i.fa-play, i.fa-pause {
+background: linear-gradient(180deg, #96385a 0%, #66255d 100%);
+box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+border-radius: 50%;
+height: 120px;
+width: 120px;
+line-height: 120px;
+}
+
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    .container{
+        width: 256px;
+    }
+    .album{
+        width: 192px;
+        height: 142px;
+    }
+    .vinyl{
+        width: 133px;
+        height: 133px;
+    }
+    .artist-image{
+        width: 142px;
+        height: 142px;
+    }
+    .song-title{
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16.5px;
+    }
+    .artist{
+        font-weight: 200;
+        font-size: 10px;
+        line-height: 13.5px;
+    }
+    .start-time, .end-time{
+        font-weight: 150;
+        font-size: 7px;
+        line-height: 9.5px;
+    }
+    .length{
+        width: 204.8px;
+        height: 2.8px;
+    }
+    i{
+        width: 33px;
+        height: 33px;
+        font-size: 33px;
+    }
+    i.fa-play, i.fa-pause{
+        width: 66px;
+        height: 66px;
+        line-height: 66px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .container{
+        width: 292px;
+    }
+    .album{
+        width: 218px;
+        height: 161px;
+    }
+    .vinyl{
+        width: 151.5px;
+        height: 151.5px;
+    }
+    .artist-image{
+        width: 161px;
+        height: 161px;
+    }
+    .song-title{
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 24.75px;
+    }
+    .artist{
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 20.25px;
+    }
+    .start-time, .end-time{
+        font-weight: 225;
+        font-size: 10.5px;
+        line-height: 14.25px;
+    }
+    .length{
+        width: 233px;
+        height: 3.125px;
+    }
+    i{
+        width: 37.5px;
+        height: 37.5px;
+        font-size: 37.5px;
+    }
+    i.fa-play, i.fa-pause{
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+    .container{
+        width: 815.5px;
+    }
+    .album{
+        width: 610.75px;
+        height: 451.5px;
+    }
+    .vinyl{
+        width: 424.13px;
+        height: 424.13px;
+    }
+    .artist-image{
+        width: 451.5px;
+        height: 451.5px;
+    }
+    .song-title{
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 49.5px;
+    }
+    .artist{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40.5px;
+    }
+    .start-time, .end-time{
+        font-weight: 450;
+        font-size: 21px;
+        line-height: 28.5px;
+    }
+    .length{
+        width: 652.4px;
+        height: 8.75px;
+        font-size: 8.75px;
+    }
+    i{
+        width: 105px;
+        height: 105px;
+    }
+    i.fa-play, i.fa-pause{
+        width: 210px;
+        height: 210px;
+        line-height: 210px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .container{
+        width: 1427px;
+    }
+    .album{
+        width: 1068px;
+        height: 790px;
+    }
+    .vinyl{
+        width: 742px;
+        height: 742px;
+    }
+    .artist-image{
+        width: 790px;
+        height: 790px;
+    }
+    .song-title{
+        font-weight: 1200;
+        font-size: 48px;
+        line-height: 66px;
+    }
+    .artist{
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 54px;
+    }
+    .start-time, .end-time{
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .length{
+        width: 1141px;
+        height: 15px;
+    }
+    i{
+        width: 183.75px;
+        height: 183.75px;
+        font-size: 183.75px;
+    }
+    i.fa-play, i.fa-pause{
+        width: 367.5px;
+        height: 367.5px;
+        line-height: 367.5px;
+    }
+}
